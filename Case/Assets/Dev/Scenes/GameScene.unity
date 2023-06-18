@@ -2429,15 +2429,15 @@ MonoBehaviour:
   yDim: 5
   piecePrefabs:
   - gemName: GemGreen
-    gemPrice: 20
+    gemPrice: 100
     gemIcon: {fileID: 21300000, guid: 8a1e8582dd1e89b4f9c9160f439ebf08, type: 3}
     gemModel: {fileID: 7111815223226444115, guid: 64d15cec471c3a24687a888b9d4a670f, type: 3}
   - gemName: GemPink
-    gemPrice: 10
+    gemPrice: 150
     gemIcon: {fileID: 21300000, guid: dcfbb690e77ea0d4c8a07bdf346f4077, type: 3}
     gemModel: {fileID: 6736075901753455422, guid: 800a90245af700d4d921e2438266ab83, type: 3}
   - gemName: GemYellow
-    gemPrice: 30
+    gemPrice: 200
     gemIcon: {fileID: 21300000, guid: 5d765c9f5a19b6c45b21bd9864b6895b, type: 3}
     gemModel: {fileID: 5286211013424249847, guid: 0fb7b991f2b570b439aeedd00d3ee615, type: 3}
   backgroundPrefab: {fileID: 4096880434392740326, guid: 27910397ef591264b9ae6937f965da22, type: 3}

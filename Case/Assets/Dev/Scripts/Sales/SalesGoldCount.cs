@@ -43,7 +43,7 @@ public class SalesGoldCount : MonoBehaviour
         {
             totalGreenGem++;
             PlayerPrefs.SetInt("totalGreenGem",totalGreenGem);
-            increaseTotalGold((gemScale + 20)*100);
+            increaseTotalGold((gemScale *100)+100);
             totalGreenText.text = totalGreenGem.ToString();
 
         }
@@ -51,7 +51,7 @@ public class SalesGoldCount : MonoBehaviour
         {
             totalPinkGem++;
             PlayerPrefs.SetInt("totalPinkGem", totalPinkGem);
-            increaseTotalGold((gemScale + 10)*100);
+            increaseTotalGold((gemScale *100)+150);
             totalPinkText.text = totalPinkGem.ToString();
 
         }
@@ -59,7 +59,7 @@ public class SalesGoldCount : MonoBehaviour
         {
             totalYellowGem++;
             PlayerPrefs.SetInt("totalYellowGem", totalYellowGem);
-            increaseTotalGold((gemScale + 30)*100);
+            increaseTotalGold((gemScale*100)+200);
             totalYellowText.text = totalYellowGem.ToString();
 
         }
