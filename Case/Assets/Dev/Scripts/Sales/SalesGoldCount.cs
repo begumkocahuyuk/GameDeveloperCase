@@ -14,10 +14,10 @@ public class SalesGoldCount : MonoBehaviour
     void Start()
     {
         instance = this;
-        totalGreenGem = 0;
-        totalPinkGem = 0;
-        totalYellowGem = 0;
-        totalGold = 0;
+        totalGreenGem = PlayerPrefs.GetInt("totalGreenGem");
+        totalPinkGem = PlayerPrefs.GetInt("totalPinkGem");
+        totalYellowGem = PlayerPrefs.GetInt("totalYellowGem");
+        totalGold = PlayerPrefs.GetInt("totalGold");
         totalGoldtext.text = totalGold.ToString();
         totalYellowText.text = totalYellowGem.ToString();
         totalPinkText.text = totalGreenGem.ToString();
@@ -33,6 +33,7 @@ public class SalesGoldCount : MonoBehaviour
     private void increaseTotalGold(float goldPrice)
     {
         totalGold =(int)(totalGold + goldPrice);
+        PlayerPrefs.SetInt("totalGold", totalGold);
         totalGoldtext.text = totalGold.ToString();
     }
 
@@ -41,6 +42,7 @@ public class SalesGoldCount : MonoBehaviour
         if(gemName == "GemGreen")
         {
             totalGreenGem++;
+            PlayerPrefs.SetInt("totalGreenGem",totalGreenGem);
             increaseTotalGold((gemScale + 20)*100);
             totalGreenText.text = totalGreenGem.ToString();
 
@@ -48,6 +50,7 @@ public class SalesGoldCount : MonoBehaviour
         if (gemName == "GemPink")
         {
             totalPinkGem++;
+            PlayerPrefs.SetInt("totalPinkGem", totalPinkGem);
             increaseTotalGold((gemScale + 10)*100);
             totalPinkText.text = totalPinkGem.ToString();
 
@@ -55,6 +58,7 @@ public class SalesGoldCount : MonoBehaviour
         if (gemName == "GemYellow")
         {
             totalYellowGem++;
+            PlayerPrefs.SetInt("totalYellowGem", totalYellowGem);
             increaseTotalGold((gemScale + 30)*100);
             totalYellowText.text = totalYellowGem.ToString();
 
